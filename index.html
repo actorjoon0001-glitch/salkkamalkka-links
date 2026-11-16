@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>살까말까 · 영상 속 상품 링크</title>
+<meta name="description" content="이 돈 주고 살 만한지, 30초 만에 골라드려요. 살까말까 쇼츠에 나온 IT 상품 링크 모음.">
+<meta name="theme-color" content="#111827">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="살까말까">
+<meta property="og:title" content="살까말까 · 영상 속 상품 링크">
+<meta property="og:description" content="이 돈 주고 살 만한지, 30초 만에 골라드려요. 쇼츠에 나온 상품을 번호로 찾아보세요.">
+<meta property="og:url" content="__SITE_URL__">
+<meta property="og:image" content="__SITE_URL__og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="__SITE_URL__og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#111827; --card:#1b2435; --card2:#222d42; --line:#2d3a52;
+  --yellow:#FFD43B; --sky:#4DABF7; --text:#ffffff; --muted:#9aa6bb;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:"Nanum Gothic",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:520px;margin:0 auto;padding:28px 16px calc(32px + env(safe-area-inset-bottom))}
+.title{font-family:"Black Han Sans",sans-serif;font-weight:400;letter-spacing:-.01em}
+
+/* 헤더 */
+header{text-align:center}
+.logo{width:96px;height:96px;border-radius:24px;display:block;margin:0 auto 12px;box-shadow:0 0 0 2px var(--line)}
+h1{margin:0;font-size:30px;color:var(--yellow)}
+.intro{margin:6px 0 16px;font-size:15px;font-weight:700}
+.yt{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;
+  background:#fff;color:#111827;text-decoration:none;font-weight:800;font-size:14px}
+.yt svg{width:22px;height:16px}
+.yt:active{transform:scale(.97)}
+
+/* 고지문 */
+.notice{margin:20px 0 16px;padding:12px 14px;border:2px solid var(--yellow);border-radius:12px;
+  background:rgba(255,212,59,.08);font-size:13.5px;font-weight:700;line-height:1.55;color:#fff}
+.notice b{color:var(--yellow)}
+
+/* 검색 */
+.search{position:sticky;top:0;z-index:5;margin:0 -16px 16px;padding:10px 16px;background:rgba(17,24,39,.94);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.search label{position:relative;display:block}
+.search input{width:100%;height:48px;padding:0 44px 0 44px;border-radius:12px;border:2px solid var(--line);
+  background:var(--card);color:#fff;font:inherit;font-size:16px;font-weight:700;outline:none}
+.search input::placeholder{color:var(--muted);font-weight:400}
+.search input:focus{border-color:var(--sky)}
+.search .ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
+.search .clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:8px;
+  background:transparent;color:var(--muted);font-size:20px;cursor:pointer;display:none}
+.search.has .clear{display:block}
+
+/* 카드 */
+.list{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+.card{position:relative;display:grid;grid-template-columns:112px 1fr;gap:14px;padding:14px;border-radius:var(--radius);
+  background:var(--card);border:2px solid transparent;scroll-margin-top:84px;transition:border-color .3s,box-shadow .3s}
+.card.hl{border-color:var(--yellow);box-shadow:0 0 0 4px rgba(255,212,59,.25);animation:pulse 1.2s ease 2}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(255,212,59,.12)}}
+.no{position:absolute;top:-8px;left:-6px;min-width:44px;height:44px;padding:0 8px;border-radius:12px;background:var(--yellow);
+  color:#111827;display:flex;align-items:center;justify-content:center;font-family:"Black Han Sans",sans-serif;font-size:26px;
+  box-shadow:0 4px 10px rgba(0,0,0,.35);z-index:1}
+.no small{font-size:14px;margin-left:1px}
+.ph{width:112px;height:112px;border-radius:12px;overflow:hidden;background:var(--card2)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.empty{display:flex;align-items:center;justify-content:center}
+.ph.empty img{width:64%;height:64%;object-fit:contain;opacity:.5;border-radius:10px}
+.body{min-width:0;display:flex;flex-direction:column}
+.name{margin:0;font-size:16px;font-weight:800;line-height:1.35;word-break:keep-all;overflow-wrap:anywhere}
+.price{margin-top:6px;font-family:"Black Han Sans",sans-serif;font-size:21px;color:var(--yellow);line-height:1.2}
+.price .lb{font-family:"Nanum Gothic",sans-serif;font-size:12px;font-weight:700;color:var(--sky);margin-left:4px}
+.when{font-size:11.5px;color:var(--muted);margin-top:2px}
+.acts{grid-column:1/-1;display:flex;align-items:center;gap:12px}
+.buy{flex:1;display:flex;align-items:center;justify-content:center;height:50px;border-radius:12px;background:var(--yellow);
+  color:#111827;text-decoration:none;font-size:16px;font-weight:800}
+.buy:active{transform:scale(.98)}
+.buy.off{background:var(--card2);color:var(--muted);pointer-events:none}
+.vid{flex:none;display:inline-flex;align-items:center;gap:4px;padding:8px 2px;font-size:13px;font-weight:700;color:var(--sky);text-decoration:none}
+.vid:hover{text-decoration:underline}
+
+/* 상태 */
+.state{padding:40px 16px;text-align:center;border-radius:var(--radius);background:var(--card);color:var(--muted);font-weight:700}
+.state .big{display:block;font-family:"Black Han Sans",sans-serif;font-size:22px;color:#fff;margin-bottom:6px;font-weight:400}
+.sample{margin:-4px 0 14px;padding:8px 12px;border-radius:10px;background:rgba(77,171,247,.14);color:var(--sky);font-size:12.5px;font-weight:700;text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;
+  padding:10px 16px;border-radius:999px;background:#fff;color:#111827;font-weight:800;font-size:14px;transition:.25s;pointer-events:none;z-index:9;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12.5px;line-height:1.7}
+footer p{margin:0 0 6px}
+footer .warn{color:#d6dce8;font-weight:700}
+
+@media (min-width:480px){
+  .card{grid-template-columns:128px 1fr}
+  .ph{width:128px;height:128px}
+  .name{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card.hl{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="logo.png" alt="살까말까 로고" width="96" height="96">
+    <h1 class="title">살까말까</h1>
+    <p class="intro">이 돈 주고 살 만한지, 30초 만에 골라드려요</p>
+    <a class="yt" href="https://www.youtube.com/@salkkamalkka_it" target="_blank" rel="noopener">
+      <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
+      유튜브 채널 보기
+    </a>
+  </header>
+
+  <p class="notice" role="note"><b>📢 고지</b> 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+
+  <div class="search" id="searchBar">
+    <label>
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off"
+        placeholder="상품명 또는 번호로 찾기 (예: 3)" aria-label="상품명 또는 번호로 찾기">
+      <button class="clear" id="clear" type="button" aria-label="검색어 지우기">×</button>
+    </label>
+  </div>
+
+  <div id="sampleNote" class="sample" hidden>테스트용 샘플 데이터예요 (실제 상품 아님)</div>
+  <ul class="list" id="list" aria-live="polite"></ul>
+  <div class="state" id="state"><span class="big">불러오는 중…</span></div>
+
+  <footer>
+    <p class="warn">가격·재고는 수시로 바뀌니 구매 전 상세페이지를 확인하세요</p>
+    <p>표시 가격은 영상 업로드 시점 기준이에요.</p>
+    <p>© 살까말까 · @salkkamalkka_it</p>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var params = new URLSearchParams(location.search);
+  var SRC = params.has("sample") ? "links.sample.json" : "links.json";
+  var $ = function(id){ return document.getElementById(id); };
+  var list = $("list"), state = $("state"), q = $("q"), bar = $("searchBar");
+  var items = [];
+
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function safeUrl(u){ return /^https?:\/\//i.test(u || "") ? u : ""; }
+  function won(n){ n = Number(n); return isFinite(n) && n > 0 ? n.toLocaleString("ko-KR") + "원" : ""; }
+  function ymd(d){ return String(d || "").slice(0,10).replace(/-/g, "."); }
+  function norm(s){ return String(s || "").toLowerCase().replace(/\s+/g, ""); }
+
+  function card(it){
+    var img = it.image
+      ? '<div class="ph"><img src="' + esc(it.image) + '" alt="' + esc(it.name) + '" loading="lazy" decoding="async" width="600" height="600"></div>'
+      : '<div class="ph empty"><img src="logo.png" alt="" loading="lazy"></div>';
+    var link = safeUrl(it.link), yt = safeUrl(it.youtube_url);
+    var price = won(it.price);
+    return '<li class="card" id="p' + it.no + '" data-no="' + it.no + '">' +
+      '<span class="no" aria-label="' + it.no + '번">' + it.no + '<small>번</small></span>' + img +
+      '<div class="body"><h2 class="name">' + esc(it.name) + '</h2>' +
+        (price ? '<div class="price">' + price + (it.price_label ? '<span class="lb">' + esc(it.price_label) + '</span>' : '') + '</div>' : '') +
+        (it.date ? '<div class="when">업로드 시점(' + ymd(it.date) + ') 기준</div>' : '') +
+      '</div>' +
+      '<div class="acts">' +
+        (link ? '<a class="buy" href="' + esc(link) + '" target="_blank" rel="sponsored noopener">쿠팡에서 보기</a>'
+              : '<span class="buy off">링크 준비 중</span>') +
+        (yt ? '<a class="vid" href="' + esc(yt) + '" target="_blank" rel="noopener">▶ 영상 보기</a>' : '') +
+      '</div></li>';
+  }
+
+  function render(){
+    var raw = q.value.trim(), key = norm(raw), num = raw.replace(/\s|번/g, "");
+    bar.classList.toggle("has", !!raw);
+    var shown = items.filter(function(it){
+      if (!key) return true;
+      if (/^\d+$/.test(num)) return String(it.no) === num || norm(it.name).indexOf(key) > -1;
+      return norm(it.name).indexOf(key) > -1;
+    });
+    list.innerHTML = shown.map(card).join("");
+    if (!items.length){
+      state.innerHTML = '<span class="big">곧 첫 상품이 올라와요</span>쇼츠가 올라오면 여기에 번호별로 정리돼요.';
+      state.hidden = false;
+    } else if (!shown.length){
+      state.innerHTML = '<span class="big">“' + esc(raw) + '” 결과가 없어요</span>상품명이나 번호를 다시 확인해주세요.';
+      state.hidden = false;
+    } else state.hidden = true;
+  }
+
+  var toastT;
+  function toast(msg){ var t = $("toast"); t.textContent = msg; t.classList.add("on");
+    clearTimeout(toastT); toastT = setTimeout(function(){ t.classList.remove("on"); }, 2200); }
+
+  function goHash(){
+    var m = decodeURIComponent(location.hash.slice(1)).match(/^p?(\d+)/);
+    if (!m || !items.length) return;
+    if (q.value){ q.value = ""; render(); }
+    var el = $("p" + Number(m[1]));
+    if (!el){ toast(m[1] + "번 상품은 아직 없어요"); return; }
+    document.querySelectorAll(".card.hl").forEach(function(c){ c.classList.remove("hl"); });
+    requestAnimationFrame(function(){
+      el.scrollIntoView({block:"center"});
+      el.classList.add("hl");
+    });
+  }
+
+  var timer;
+  q.addEventListener("input", function(){ clearTimeout(timer); timer = setTimeout(render, 80); });
+  q.addEventListener("keydown", function(e){
+    if (e.key === "Enter"){ var n = q.value.replace(/\s|번/g, "");
+      if (/^\d+$/.test(n) && $("p" + Number(n))){ var v = Number(n); q.blur(); q.value = ""; render();
+        if (location.hash === "#" + v) goHash(); else location.hash = v; } else q.blur(); }
+  });
+  $("clear").addEventListener("click", function(){ q.value = ""; render(); q.focus(); });
+  window.addEventListener("hashchange", goHash);
+
+  fetch(SRC, {cache: "no-cache"}).then(function(r){ if (!r.ok) throw r.status; return r.json(); })
+    .then(function(d){
+      items = (d && d.items || []).slice().sort(function(a, b){ return b.no - a.no; });
+      if (d && d.sample) $("sampleNote").hidden = false;
+      render(); goHash();
+    })
+    .catch(function(){ items = []; render(); });
+})();
+</script>
+</body>
+</html>

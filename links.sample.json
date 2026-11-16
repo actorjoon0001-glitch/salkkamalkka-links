@@ -1,0 +1,11 @@
+{
+ "updated_at": "2026-11-17T12:00:00",
+ "sample": true,
+ "items": [
+  {"no": 5, "slug": "sample-mouse", "name": "무소음 무선 마우스 (샘플)", "price": 29900, "price_label": "쿠팡 판매가", "date": "2026-11-21", "link": "https://www.coupang.com/", "youtube_url": "https://www.youtube.com/@salkkamalkka_it", "image": "img/sample/5.jpg"},
+  {"no": 4, "slug": "sample-monitor", "name": "27인치 QHD 165Hz 게이밍 모니터 (샘플)", "price": 289000, "price_label": "", "date": "2026-11-20", "link": "https://www.coupang.com/", "youtube_url": "https://www.youtube.com/@salkkamalkka_it", "image": "img/sample/4.jpg"},
+  {"no": 3, "slug": "sample-keyboard", "name": "저소음 적축 기계식 키보드 텐키리스 (샘플)", "price": 89000, "price_label": "", "date": "2026-11-19", "link": "https://www.coupang.com/", "youtube_url": "https://www.youtube.com/@salkkamalkka_it", "image": "img/sample/3.jpg"},
+  {"no": 2, "slug": "sample-earbuds", "name": "노이즈캔슬링 무선 이어폰 (샘플)", "price": 159000, "price_label": "정가", "date": "2026-11-18", "link": "https://www.coupang.com/", "youtube_url": "https://www.youtube.com/@salkkamalkka_it", "image": "img/sample/2.jpg"},
+  {"no": 1, "slug": "sample-macbook", "name": "맥북 프로 14 M6 (샘플)", "price": 3290000, "price_label": "애플 공식 시작가", "date": "2026-11-17", "link": "https://www.coupang.com/", "youtube_url": "https://www.youtube.com/@salkkamalkka_it", "image": null}
+ ]
+}
