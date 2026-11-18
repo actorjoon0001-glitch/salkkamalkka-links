@@ -1,4 +1,16 @@
 {
- "updated_at": "2026-11-17T02:10:59",
- "items": []
+ "updated_at": "2026-11-18T22:34:22",
+ "items": [
+  {
+   "no": 1,
+   "slug": "macbook-pro-14-m6",
+   "name": "맥북 프로 14 M6",
+   "price": 3290000,
+   "price_label": "쿠팡 판매가",
+   "date": "2026-11-18",
+   "link": "https://link.coupang.com/a/iMs1x9EVy1",
+   "youtube_url": "https://youtu.be/uYQkvzTeuu4",
+   "image": "img/macbook-pro-14-m6.jpg"
+  }
+ ]
 }
