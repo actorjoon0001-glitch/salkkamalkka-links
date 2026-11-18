@@ -111,6 +111,11 @@ footer .warn{color:#d6dce8;font-weight:700}
   .name{font-size:17px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card.hl{animation:none}}
+
+/* 곧 올라올 상품 */
+.sec{margin:30px 0 16px;font-family:"Black Han Sans",sans-serif;font-weight:400;font-size:20px;color:var(--sky)}
+.sec small{display:block;margin-top:2px;font-family:"Nanum Gothic",sans-serif;font-size:12.5px;font-weight:700;color:var(--muted)}
+.card.soon .no{background:var(--sky);font-size:15px;min-width:0;height:30px;padding:0 10px;border-radius:9px}
 </style>
 </head>
 <body>
@@ -139,6 +144,8 @@ footer .warn{color:#d6dce8;font-weight:700}
   <div id="sampleNote" class="sample" hidden>테스트용 샘플 데이터예요 (실제 상품 아님)</div>
   <ul class="list" id="list" aria-live="polite"></ul>
   <div class="state" id="state"><span class="big">불러오는 중…</span></div>
+  <h2 class="sec" id="soonH" hidden>곧 올라올 상품<small>영상이 올라오면 위쪽에 번호가 붙어요</small></h2>
+  <ul class="list" id="soon"></ul>
 
   <footer>
     <p class="warn">가격·재고는 수시로 바뀌니 구매 전 상세페이지를 확인하세요</p>
@@ -154,7 +161,7 @@ footer .warn{color:#d6dce8;font-weight:700}
   var SRC = params.has("sample") ? "links.sample.json" : "links.json";
   var $ = function(id){ return document.getElementById(id); };
   var list = $("list"), state = $("state"), q = $("q"), bar = $("searchBar");
-  var items = [];
+  var items = [], upcoming = [];
 
   function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
@@ -182,6 +189,22 @@ footer .warn{color:#d6dce8;font-weight:700}
       '</div></li>';
   }
 
+  function soonCard(it){
+    var img = it.image
+      ? '<div class="ph"><img src="' + esc(it.image) + '" alt="' + esc(it.name) + '" loading="lazy" decoding="async" width="600" height="600"></div>'
+      : '<div class="ph empty"><img src="logo.png" alt="" loading="lazy"></div>';
+    var link = safeUrl(it.link), price = won(it.price);
+    return '<li class="card soon"><span class="no">영상 준비 중</span>' + img +
+      '<div class="body"><h2 class="name">' + esc(it.name) + '</h2>' +
+        (price ? '<div class="price">' + price + (it.price_label ? '<span class="lb">' + esc(it.price_label) + '</span>' : '') + '</div>' : '') +
+        (it.date ? '<div class="when">' + ymd(it.date) + ' 기준</div>' : '') +
+      '</div>' +
+      '<div class="acts">' +
+        (link ? '<a class="buy" href="' + esc(link) + '" target="_blank" rel="sponsored noopener">쿠팡에서 보기</a>'
+              : '<span class="buy off">링크 준비 중</span>') +
+      '</div></li>';
+  }
+
   function render(){
     var raw = q.value.trim(), key = norm(raw), num = raw.replace(/\s|번/g, "");
     bar.classList.toggle("has", !!raw);
@@ -191,7 +214,11 @@ footer .warn{color:#d6dce8;font-weight:700}
       return norm(it.name).indexOf(key) > -1;
     });
     list.innerHTML = shown.map(card).join("");
-    if (!items.length){
+    var shownUp = upcoming.filter(function(it){ return !key || norm(it.name).indexOf(key) > -1; });
+    $("soon").innerHTML = shownUp.map(soonCard).join("");
+    $("soonH").hidden = !shownUp.length;
+    if (shown.length || (key && shownUp.length)) state.hidden = true;
+    else if (!items.length){
       state.innerHTML = '<span class="big">곧 첫 상품이 올라와요</span>쇼츠가 올라오면 여기에 번호별로 정리돼요.';
       state.hidden = false;
     } else if (!shown.length){
@@ -230,10 +257,11 @@ footer .warn{color:#d6dce8;font-weight:700}
   fetch(SRC, {cache: "no-cache"}).then(function(r){ if (!r.ok) throw r.status; return r.json(); })
     .then(function(d){
       items = (d && d.items || []).slice().sort(function(a, b){ return b.no - a.no; });
+      upcoming = (d && d.upcoming) || [];
       if (d && d.sample) $("sampleNote").hidden = false;
       render(); goHash();
     })
-    .catch(function(){ items = []; render(); });
+    .catch(function(){ items = []; upcoming = []; render(); });
 })();
 </script>
 </body>
