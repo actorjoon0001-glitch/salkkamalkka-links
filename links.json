@@ -1,6 +1,17 @@
 {
- "updated_at": "2026-11-19T11:02:45",
+ "updated_at": "2026-11-19T17:03:27",
  "items": [
+  {
+   "no": 3,
+   "slug": "airpods-pro-3",
+   "name": "에어팟 프로 3",
+   "price": 296000,
+   "price_label": "쿠팡 판매가",
+   "date": "2026-11-19",
+   "link": "https://link.coupang.com/a/iMyONRq4hE",
+   "youtube_url": "https://youtu.be/mT5WA_hqV1I",
+   "image": "img/airpods-pro-3.jpg"
+  },
   {
    "no": 2,
    "slug": "macbook-air-13-m5",
@@ -25,15 +36,6 @@
   }
  ],
  "upcoming": [
-  {
-   "slug": "airpods-pro-3",
-   "name": "에어팟 프로 3",
-   "price": 296000,
-   "price_label": "쿠팡 판매가",
-   "date": "2026-11-19",
-   "link": "https://link.coupang.com/a/iMyONRq4hE",
-   "image": "img/airpods-pro-3.jpg"
-  },
   {
    "slug": "ipad-air-11-m4",
    "name": "아이패드 에어 11 M4",
