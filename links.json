@@ -1,6 +1,17 @@
 {
- "updated_at": "2026-11-20T11:02:47",
+ "updated_at": "2026-11-20T17:02:46",
  "items": [
+  {
+   "no": 5,
+   "slug": "sony-wh-1000xm6",
+   "name": "소니 WH-1000XM6",
+   "price": 468000,
+   "price_label": "쿠팡 판매가",
+   "date": "2026-11-20",
+   "link": "https://link.coupang.com/a/iMyQooJc7M",
+   "youtube_url": "https://youtu.be/6vUXLmOi5T0",
+   "image": "img/sony-wh-1000xm6.jpg"
+  },
   {
    "no": 4,
    "slug": "ipad-air-11-m4",
@@ -47,15 +58,6 @@
   }
  ],
  "upcoming": [
-  {
-   "slug": "sony-wh-1000xm6",
-   "name": "소니 WH-1000XM6",
-   "price": 468000,
-   "price_label": "쿠팡 판매가",
-   "date": "2026-11-20",
-   "link": "https://link.coupang.com/a/iMyQooJc7M",
-   "image": "img/sony-wh-1000xm6.jpg"
-  },
   {
    "slug": "macbook-neo",
    "name": "맥북 네오",
