@@ -1,6 +1,17 @@
 {
- "updated_at": "2026-11-22T11:02:37",
+ "updated_at": "2026-11-22T17:03:16",
  "items": [
+  {
+   "no": 8,
+   "slug": "airpods-max-2",
+   "name": "에어팟 맥스 2",
+   "price": 691490,
+   "price_label": "쿠팡 판매가",
+   "date": "2026-11-22",
+   "link": "https://link.coupang.com/a/iP9Tfzzm9I",
+   "youtube_url": "https://youtu.be/9BIyQqtlGs0",
+   "image": "img/airpods-max-2.jpg"
+  },
   {
    "no": 7,
    "slug": "galaxy-tab-s11",
@@ -80,15 +91,6 @@
   }
  ],
  "upcoming": [
-  {
-   "slug": "airpods-max-2",
-   "name": "에어팟 맥스 2",
-   "price": 691490,
-   "price_label": "쿠팡 판매가",
-   "date": "2026-11-22",
-   "link": "https://link.coupang.com/a/iP9Tfzzm9I",
-   "image": "img/airpods-max-2.jpg"
-  },
   {
    "slug": "lg-gram-pro-16-2026",
    "name": "LG 그램 프로 AI 16 2026",
