@@ -1,6 +1,17 @@
 {
- "updated_at": "2026-11-22T17:03:16",
+ "updated_at": "2026-11-23T11:03:15",
  "items": [
+  {
+   "no": 9,
+   "slug": "lg-gram-pro-16-2026",
+   "name": "LG 그램 프로 AI 16 2026",
+   "price": 2636200,
+   "price_label": "쿠팡 판매가",
+   "date": "2026-11-23",
+   "link": "https://link.coupang.com/a/iP9ThkkiJ2",
+   "youtube_url": "https://youtu.be/aGYk3Q9gL9I",
+   "image": "img/lg-gram-pro-16-2026.jpg"
+  },
   {
    "no": 8,
    "slug": "airpods-max-2",
@@ -92,20 +103,11 @@
  ],
  "upcoming": [
   {
-   "slug": "lg-gram-pro-16-2026",
-   "name": "LG 그램 프로 AI 16 2026",
-   "price": 2636200,
-   "price_label": "쿠팡 판매가",
-   "date": "2026-11-22",
-   "link": "https://link.coupang.com/a/iP9ThkkiJ2",
-   "image": "img/lg-gram-pro-16-2026.jpg"
-  },
-  {
    "slug": "lg-ultragear-27gx704a",
    "name": "LG 울트라기어 올레드 27",
    "price": 720300,
    "price_label": "쿠팡 판매가",
-   "date": "2026-11-22",
+   "date": "2026-11-23",
    "link": "https://link.coupang.com/a/iP9TjfNd6W",
    "image": "img/lg-ultragear-27gx704a.jpg"
   },
@@ -114,7 +116,7 @@
    "name": "갤럭시북6 프로 16",
    "price": 2899000,
    "price_label": "쿠팡 판매가",
-   "date": "2026-11-22",
+   "date": "2026-11-23",
    "link": "https://link.coupang.com/a/iP9Tk1UmVo",
    "image": "img/galaxy-book6-pro-16.jpg"
   }
