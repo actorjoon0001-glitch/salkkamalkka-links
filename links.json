@@ -1,6 +1,17 @@
 {
- "updated_at": "2026-11-23T17:03:53",
+ "updated_at": "2026-11-24T11:02:49",
  "items": [
+  {
+   "no": 11,
+   "slug": "galaxy-book6-pro-16",
+   "name": "갤럭시북6 프로 16",
+   "price": 2899000,
+   "price_label": "쿠팡 판매가",
+   "date": "2026-11-24",
+   "link": "https://link.coupang.com/a/iP9Tk1UmVo",
+   "youtube_url": "https://youtu.be/Y3gKmpgy4k0",
+   "image": "img/galaxy-book6-pro-16.jpg"
+  },
   {
    "no": 10,
    "slug": "lg-ultragear-27gx704a",
@@ -112,15 +123,5 @@
    "image": "img/macbook-pro-14-m6.jpg"
   }
  ],
- "upcoming": [
-  {
-   "slug": "galaxy-book6-pro-16",
-   "name": "갤럭시북6 프로 16",
-   "price": 2899000,
-   "price_label": "쿠팡 판매가",
-   "date": "2026-11-23",
-   "link": "https://link.coupang.com/a/iP9Tk1UmVo",
-   "image": "img/galaxy-book6-pro-16.jpg"
-  }
- ]
+ "upcoming": []
 }
